@@ -1,6 +1,3 @@
-<p align="center">
-  <a href="#" target="blank"><img src="src/components/hero/EasyFits.png" width="200" alt="Nest Logo" /></a>
-</p>
 
 # React + Vite
 

@@ -1,0 +1,118 @@
+.team{
+    border-radius: 15px;
+    padding: 75px;
+    margin-top: 129px;
+    z-index: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+    box-sizing: border-box;
+    background-color: rgba(12,12,12,0.6);
+}
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 1em;
+    text-align: center;
+}
+
+
+
+.column{
+    width: 100%;
+    padding: 0.5em 0;
+}
+
+
+.teamh{
+    width: 100%;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    color: var(--color-text);
+    text-align: left;
+}
+
+.card{
+    box-shadow: 0 0 0 0.2em rgba(25,0,58,0.1);
+    padding: 3.5em 1em;
+    border-radius: 0.6em;
+    color: #1f003b;
+    cursor: pointer;
+    background-color: #ffff;
+    transition: transform 0.3s ease;
+}
+
+
+
+
+.card .img_container{
+    width: 8em;
+    height: 8em;
+    background-color: #93ffb9;    /* or #a993ff */
+    padding: 0.5em;
+    border-radius: 50%;
+    margin: 0 auto 2em auto;
+}
+
+.card .imgContainer{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.card h3{
+    font-weight: 500;
+    
+}
+
+.card p{
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0.5em 0 2em 0;
+    letter-spacing: 2px;
+}
+
+
+.icons {
+    list-style: none;
+    width: 50%;
+    margin: auto;
+    justify-content: space-between;
+    display: flex; /* Utilize flexbox to align icons horizontally */
+}
+
+
+.card a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.4em;
+}
+
+
+.card:hover{
+    background: linear-gradient(#6045ea,#8567f7);
+    color: #ffffff;
+    box-shadow: 0 0 0 0.2em rgba(26, 1, 59, 0.15);
+    transform: translateY(-10px) scale(1.05);
+}
+
+.card:hover .img_container{
+    transform: scale(1.15);
+}
+
+
+@media screen and (min-width: 830px){
+    .team{
+        padding: 1em 7em;
+    }
+    .card{
+        padding: 5em 1em;
+    }
+    .column{
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+        padding: 0 1em;
+    }
+}

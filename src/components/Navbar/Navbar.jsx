@@ -1,10 +1,11 @@
 import React, {useState} from "react";
-
+import { useNavigate } from 'react-router-dom';
 import styles from "./Navbar.module.css"
 import {getImageUrl} from "../../utils"
 
 export const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const navigate = useNavigate();
     
     return(
         <nav className={styles.navbar}>
@@ -31,7 +32,7 @@ export const Navbar = () => {
                         <a href="#blog" className={styles.blog}>Blog</a>
                     </li>
                     <li>
-                        <a href="#getintouch" className={styles.Joinbtn}>Join the waitlist!</a>
+                        { <a onClick={()=>navigate('/SignUp')}className={styles.Joinbtn}>Join the waitlist!</a> }
                     </li>
                 </ul>
             </div>

@@ -10,59 +10,57 @@
     overflow: hidden;
 } */
 
-
-
 /* ANIMATED GRADIENT BACKGROUND */
 
- 
 @import "./vars.css";
 
-.App {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: linear-gradient(-319deg, #f4eef1 0%, #6602a9 20%, #ff8c00 100%);
-    background-size: 400% 400%;
-    animation: gradient 6s ease infinite;
+.App,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(30deg, #f0dbf8, #1b9dc55d, #54067e4d, #24fbe270);
+  background-size: 500% 500%;
+  animation: gradient 6s ease infinite;
 }
 
+.App::after,
 .App::before,
-.App::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(319deg, #f1ecef 0%, #6602a9 20%, #ff8c00 100%);
-    background-size: 400% 400%;
-    border-radius: 5px;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    animation: border-gradient 6s ease infinite;
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(20deg, #f0dbf8, #1b9dc55d, #54067e4d, #24fbe270);
+  background-size: 500% 500%;
+  border-radius: 5px;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  animation: border-gradient 6s ease infinite;
 }
 
 @keyframes border-gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-

@@ -1,22 +1,20 @@
-import styles from './App.module.css';
-import { About } from './components/About/About';
-import { Contact } from './components/Contact/Contact';
-import { Hero } from './components/Hero/Hero';
-import { Loader } from './components/Loader/Loader';
-import { Navbar } from "./components/Navbar/Navbar";
-import { Team } from './components/Team/Team';
+import { useState } from "react";
+import "./App.module.css";
+import LandingPage from "./pages/LandingPage";
+import SignUp from "./pages/SignUp";
+import EmailVerify from "./pages/EmailVerify";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className={styles.App}>
-      <Loader />
-      <Navbar />
-      <Hero />
-      <About />
-      <Team />
-      <Contact />
-    </div>
-  )
+    <>
+      <Routes>
+        <Route path="/" element={<LandingPage />}></Route>
+        <Route path="/SignUp" element={<SignUp />}></Route>
+        <Route path="/EmailVerify" element={<EmailVerify />}></Route>
+      </Routes>
+    </>
+  );
 }
 
 export default App;

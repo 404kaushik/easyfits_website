@@ -8,3 +8,179 @@
 html{
   scroll-behavior: smooth;
 }
+
+.containerMvp {
+  background-color: #fdffff;
+  border-radius: 1rem;
+  border: 1px solid rgb(168, 176, 184);
+  padding: 2rem;
+  margin: 5rem 7rem;
+  font-family: Manrope, sans-serif;
+}
+
+/* Sign up specific css */
+.externalSignUp {
+  margin: 1rem 0;
+}
+.google,
+.apple {
+  margin: 1rem 1rem 0rem 0;
+  line-height: 24px;
+  padding: 1.5rem 1rem;
+}
+
+.externalSignUp img, .externalSignUp svg{
+  padding-right: 0.2rem;
+}
+
+button {
+  border: 1px solid rgb(168, 176, 184);
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 0.6rem 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  height: 3rem;
+  cursor: pointer;
+}
+
+hr{
+background-color: #53067e;
+padding: 2px;
+border: none;
+border-radius: 2rem;
+width:3.5rem;
+margin-right:1rem;
+height: .05rem;
+}
+
+.container h1{
+  font-weight: 800;
+}
+
+.styledSignUp{
+display: inline-flex;
+align-items: center;
+color:#53067e;
+font-weight: 500;
+font-size: 14.5px;
+}
+
+.smallText{
+  font-weight: 200;
+  font-size: 14px;
+  margin: 1.5rem 0;
+}
+
+.smallText a{
+ color: #7443B8;
+ text-decoration: none;
+}
+
+.submitSignUp{
+  background-color: #7443B8;
+  color:#fdffff;
+  font-weight: 400;
+  padding: 0rem 5rem;
+  border-radius: 2rem;
+  font-size: 16px;
+}
+
+
+form div{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0 2rem;
+}
+
+input{
+  margin-top: .5rem;
+  display:block;
+  padding:10px 10px 10px 5px;
+  border:none;
+  border-bottom:1px solid #757575;
+  font-size: 14px;
+}
+
+
+input:focus{ 
+  outline:none; 
+  border-bottom: 1px solid #7443B8;
+}
+
+.divider{
+display: inline-flex;
+}
+
+footer{
+  background-color: #333;
+  color: #fff;
+  padding-top: 2em;
+  font-family: "Single Day", sans-serif;
+  font-size: 20px;
+}
+
+footer div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+footer div ul li a:hover{
+color: #7443B8;
+}
+
+footer div ul li a{
+  color: #fff;
+}
+
+footer div:nth-child(2){
+  margin-top: 0.5em;
+  border-top: solid 1px #fff;
+}
+
+div.error_email, div.error_password{
+  border-bottom: solid 0.5px red;
+}
+label.error_email, label.error_password{
+  color: red;
+}
+
+
+/* Email verify css */
+
+.otpTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.otpTitle h2{
+  padding:2rem 0rem 0rem 0rem;
+  font-size: 18px;
+}
+.otp-field {
+  padding: 2rem 0;
+  display: flex;
+}
+.otp-field input {
+  width: 2.7rem;
+  font-size: 30px;
+  padding: .5rem;
+  text-align: center;
+  border-radius: .5rem;
+  margin:0.5rem;
+  border: 2px solid #7443B8;
+  background: #ffffff;
+  font-weight: bold;
+  color: #000000;
+  outline: none;
+  transition: all 0.1s;
+}
+.otp-field input:focus {
+  border: 2px solid #a527ff;
+  box-shadow: 0 0 2px 2px #a527ff6a;
+}
+
+

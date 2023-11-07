@@ -15,8 +15,6 @@ function EmailVerify() {
           <h1> Check your email</h1>
             <h2>A verification code has been sent to your email, please verify your account.</h2>
          
-        
-
           <div className="otp-field">
             <input type="text" maxLength="1" />
             <input type="text" maxLength="1" />

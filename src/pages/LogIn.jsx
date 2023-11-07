@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate, Link} from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Cookies from "js-cookie";
 
 import googleLogo from "../assets/mvp/logo/google.png";
@@ -9,7 +9,7 @@ import { url } from "../components/url";
 import { Navbar } from "../components/Navbar/Navbar";
 import { Contact } from "../components/Contact/Contact";
 
-function SignUp() {
+function LogIn() {
   const navigation = useNavigate();
 
   const [email, setEmail] = useState("");
@@ -123,20 +123,20 @@ function SignUp() {
       <div className="containerMvp">
         <div className="divider">
           <div>
-            <h1>Sign Up!</h1>
+            <h1>Log In!</h1>
 
             <div className="externalSignUp">
               <button className="google">
-                <img src={googleLogo} width="25px"></img>Sign up with Google
+                <img src={googleLogo} width="25px"></img>Continue with Google
               </button>
               <button className="apple">
-                <FaApple size={22} /> Sign Up with Apple
+                <FaApple size={22} />Continue with Apple
               </button>
             </div>
 
             <div className="styledSignUp">
               <hr />
-              <p> or sign up with your email address </p>
+              <p> or log in with your email address </p>
             </div>
 
             <form method="POST" onSubmit={handleSubmit}>
@@ -196,20 +196,12 @@ function SignUp() {
                 <input type="checkbox" id="checkbox" />
                 <label htmlFor="checkbox">Remember me</label>
               </div>
-              <p className="smallText">
-                By clicking sign up, you agree to the EasyFits{" "}
-                <a href="">terms and conditions</a> and{" "}
-                <a href="">privacy policy</a>
-              </p>
 
-              <button type="submit" className="submitSignUp">
-                Sign Up
+             <button type="submit" className="submitSignUp">
+                Log in
               </button>
             </form>
-            <p className="smallText">
-              Already have an account?
-              <Link to="/LogIn">Log in</Link>
-            </p>
+            <p className="smallText">Don't have an account?  <Link to="/SignUp">Sign Up</Link></p>
           </div>
           <div>
             <img src={image} width={500}></img>
@@ -221,4 +213,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default LogIn;

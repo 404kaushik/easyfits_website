@@ -14,13 +14,14 @@ html{
   border-radius: 1rem;
   border: 1px solid rgb(168, 176, 184);
   padding: 2rem;
-  margin: 5rem 7rem;
+  width: 80%;
+  margin: 4rem auto;
   font-family: Manrope, sans-serif;
 }
 
 /* Sign up specific css */
 .externalSignUp {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 .google,
 .apple {
@@ -69,7 +70,7 @@ font-size: 14.5px;
 .smallText{
   font-weight: 200;
   font-size: 14px;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 0;
 }
 
 .smallText a{
@@ -81,16 +82,22 @@ font-size: 14.5px;
   background-color: #7443B8;
   color:#fdffff;
   font-weight: 400;
-  padding: 0rem 5rem;
+  padding: 0rem 4.5rem;
   border-radius: 2rem;
   font-size: 16px;
+  width: fit-content;
+  margin-top: 1.5rem;
 }
 
+form{
+  display: flex;
+  flex-direction: column;
+}
 
 form div{
   display: flex;
   flex-direction: column;
-  margin: 1rem 0 2rem;
+  margin: 2rem 0 0;
 }
 
 input{
@@ -109,35 +116,19 @@ input:focus{
 }
 
 .divider{
-display: inline-flex;
-}
-
-footer{
-  background-color: #333;
-  color: #fff;
-  padding-top: 2em;
-  font-family: "Single Day", sans-serif;
-  font-size: 20px;
-}
-
-footer div{
-  display: flex;
-  flex-direction: row;
+  width: 100%;
+  display: inline-flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
-footer div ul li a:hover{
-color: #7443B8;
+.checkbox{
+  display: inline-flex;
+  flex-direction: row;
+  margin: 1rem 0 0;
 }
-
-footer div ul li a{
-  color: #fff;
-}
-
-footer div:nth-child(2){
-  margin-top: 0.5em;
-  border-top: solid 1px #fff;
+.checkbox label{
+ margin:0.5rem 0 0 0.5rem;
 }
 
 div.error_email, div.error_password{

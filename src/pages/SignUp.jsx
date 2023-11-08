@@ -6,7 +6,7 @@ import Cookies from "js-cookie";
 import googleLogo from "../assets/mvp/logo/google.png";
 import { FaApple } from "react-icons/fa";
 import image from "../assets/mvp/EasyFitsStart.png";
-import { url } from "../components/url";
+import { url } from "../components/shared/url";
 import { Navbar } from "../components/Navbar/Navbar";
 import { Contact } from "../components/Contact/Contact";
 
@@ -38,17 +38,11 @@ function SignUp() {
     })
       .then((response) => response.json())
       .then(async (tokens) => {
-        console.log(tokens);
         if (tokens.statusCode == 409) {
           sameUser("An account with the same email already exist");
         } else {
-          console.log("Account successfully created");
 
-          Cookies.remove("userId");
-
-          Cookies.set("userId", tokens.id);
-
-          const urlLogin = url.auth + "login";
+          const urlLogin = url.auth + "signIn";
 
           fetch(urlLogin, {
             method: "POST",
@@ -62,19 +56,8 @@ function SignUp() {
             }),
           })
             .then((res) => res.json())
-            .then(async (receivedTokens) => {
-              console.log(receivedTokens);
-              Cookies.remove("refreshToken");
-
-              Cookies.set("refreshToken", receivedTokens.refreshToken, {
-                expires: 30,
-                secure: true,
-                httpOnly: true,
-              });
-            })
             .then(() => {
-              //   navigation("/email-verification");
-              console.log("Login successful");
+              navigation("/EmailVerify");
             });
         }
       });

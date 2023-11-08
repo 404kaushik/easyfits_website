@@ -1,7 +1,6 @@
 import React from 'react';
 
 import styles from "./Team.module.css";
-import {getImageUrl} from "../../utils";
 
 export const Team = () => {
     return <section className={styles.team} id="team">
@@ -13,24 +12,24 @@ export const Team = () => {
             <div className={styles.column}>
                 <div className={styles.card}>
                     <div className={styles.img_container}>
-                        <img src={getImageUrl("team/safiya.jpeg")} className={styles.imgContainer} alt="Safiya CEO" />
+                        <img src="src/assets/team/safiya.jpeg" className={styles.imgContainer} alt="Safiya CEO" />
                     </div>
                     <h3>Safiya Khaki</h3>
                     <p>Founder</p>
                     <ul className={styles.icons}>
                         <li className={styles.icon}>                            
                             <a href="#">
-                                <img src={getImageUrl("team/twitter.png")} alt="Twitter Icon" />
+                                <img src="src/assets/team/twitter.png" alt="Twitter Icon" />
                             </a>
                         </li>
                         <li className={styles.icon}>
                             <a href="#">
-                                <img src={getImageUrl("team/instagram.png")} alt="Instagram Icon" />
+                                <img src="src/assets/team/instagram.png" alt="Instagram Icon" />
                             </a>                            
                         </li>
                         <li className={styles.icon}>                            
                             <a href="https://www.linkedin.com/in/safiya-khaki/">
-                            <img src={getImageUrl("team/linkedin.png")} alt="LinkedIn Icon" href="https://www.linkedin.com/in/kaushik-tumu-b6103a153/"/>
+                            <img src="src/assets/team/linkedin.png" alt="LinkedIn Icon" href="https://www.linkedin.com/in/kaushik-tumu-b6103a153/"/>
                             </a>
                         </li>
                     </ul>
@@ -40,24 +39,24 @@ export const Team = () => {
             <div className={styles.column}>
                 <div className={styles.card}>
                     <div className={styles.img_container}>
-                        <img src={getImageUrl("team/joseph.png")} className={styles.imgContainer} alt="Joseph COO" />
+                        <img src="src/assets/team/joseph.png" className={styles.imgContainer} alt="Joseph COO" />
                     </div>
                     <h3>Joseph</h3>
                     <p>Founder</p>
                     <ul className={styles.icons}>
                         <li className={styles.icon}>                            
                             <a href="#">
-                                <img src={getImageUrl("team/twitter.png")} alt="Twitter Icon" />
+                                <img src="src/assets/team/twitter.png" alt="Twitter Icon" />
                             </a>
                         </li>
                         <li className={styles.icon}>
                             <a href="https://www.linkedin.com/in/kaushik-tumu-b6103a153/">
-                                <img src={getImageUrl("team/instagram.png")} alt="Instagram Icon" />
+                                <img src="src/assets/team/instagram.png" alt="Instagram Icon" />
                             </a>                            
                         </li>
                         <li className={styles.icon}>                            
                             <a href="#">
-                            <img src={getImageUrl("team/linkedin.png")} alt="LinkedIn Icon" href="https://www.linkedin.com/in/kaushik-tumu-b6103a153/"/>
+                            <img src="src/assets/team/linkedin.png" alt="LinkedIn Icon" href="https://www.linkedin.com/in/kaushik-tumu-b6103a153/"/>
                             </a>
                         </li>
                     </ul>
@@ -67,24 +66,24 @@ export const Team = () => {
             <div className={styles.column}>
                 <div className={styles.card}>
                     <div className={styles.img_container}>
-                        <img src={getImageUrl("team/user.png")} className={styles.imgContainer} alt="User COO" />
+                        <img src="src/assets/team/user.png" className={styles.imgContainer} alt="User COO" />
                     </div>
                     <h3>User</h3>
                     <p>Founder</p>
                     <ul className={styles.icons}>
                         <li className={styles.icon}>                            
                             <a href="#">
-                                <img src={getImageUrl("team/twitter.png")} alt="Twitter Icon" />
+                                <img src="src/assets/team/twitter.png" alt="Twitter Icon" />
                             </a>
                         </li>
                         <li className={styles.icon}>
                             <a href="https://www.linkedin.com/in/kaushik-tumu-b6103a153/">
-                                <img src={getImageUrl("team/instagram.png")} alt="Instagram Icon" />
+                                <img src="src/assets/team/instagram.png" alt="Instagram Icon" />
                             </a>                            
                         </li>
                         <li className={styles.icon}>                            
                             <a href="#">
-                            <img src={getImageUrl("team/linkedin.png")} alt="LinkedIn Icon" href="https://www.linkedin.com/in/kaushik-tumu-b6103a153/"/>
+                            <img src="src/assets/team/linkedin.png" alt="LinkedIn Icon" href="https://www.linkedin.com/in/kaushik-tumu-b6103a153/"/>
                             </a>
                         </li>
                     </ul>

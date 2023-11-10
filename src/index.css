@@ -75,6 +75,7 @@ font-size: 14.5px;
 .smallText a{
  color: #7443B8;
  text-decoration: none;
+ cursor: pointer;
 }
 
 .submitSignUp{
@@ -163,6 +164,7 @@ label.error_email, label.error_password{
 .otp-field {
   padding: 2rem 0;
   display: flex;
+  flex-direction: row;
 }
 .otp-field input {
   width: 2.7rem;
@@ -177,6 +179,7 @@ label.error_email, label.error_password{
   color: #000000;
   outline: none;
   transition: all 0.1s;
+  appearance: textfield;
 }
 .otp-field input:focus {
   border: 2px solid #a527ff;

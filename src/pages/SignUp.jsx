@@ -46,6 +46,7 @@ function SignUp() {
 
           fetch(urlLogin, {
             method: "POST",
+            credentials: "include",
             headers: {
               Accept: "application/json",
               "Content-Type": "application/json",

@@ -77,9 +77,11 @@ hr {
   margin: 1.5rem 0 0;
 }
 
-.smallText a {
-  color: #7443b8;
-  text-decoration: none;
+
+.smallText a{
+ color: #7443B8;
+ text-decoration: none;
+ cursor: pointer;
 }
 
 .submitSignUp {
@@ -160,6 +162,7 @@ h2 {
 .otp-field {
   padding: 2rem 0;
   display: flex;
+  flex-direction: row;
 }
 .otp-field input {
   width: 2.7rem;
@@ -174,6 +177,7 @@ h2 {
   color: #000000;
   outline: none;
   transition: all 0.1s;
+  appearance: textfield;
 }
 .otp-field input:focus {
   border: 2px solid #a527ff;

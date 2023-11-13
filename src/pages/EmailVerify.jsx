@@ -116,7 +116,9 @@ const resendverificationcode = () =>{
           <h1> Check your email</h1>
             <h2>A verification code has been sent to your email, please verify your account.</h2>
          
+
         <form method="POST" onSubmit={handleSubmit}>
+    
           <div className="otp-field">
             <input type="text" maxLength="1" min = '0' max = "9" ref = {otpref[0]} onChange={(e) =>{setopt1(e.target.value); if(e.target.value.length === 1){otpref[1].current.focus()}}}/>
             <input type="text" maxLength="1" min = '0' max = "9" ref = {otpref[1]} onChange={(e) =>{setopt2(e.target.value); if(e.target.value.length === 1){otpref[2].current.focus()}}}/>

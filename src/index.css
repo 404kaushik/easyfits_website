@@ -1,12 +1,15 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Outfit",Arial, Helvetica, sans-serif;
+  font-family: "Outfit", Arial, Helvetica, sans-serif;
 }
 
-html{
+html {
   scroll-behavior: smooth;
+}
+input[type="checkbox"] {
+  accent-color: #a527ff;
 }
 
 .containerMvp {
@@ -14,13 +17,14 @@ html{
   border-radius: 1rem;
   border: 1px solid rgb(168, 176, 184);
   padding: 2rem;
-  margin: 5rem 7rem;
+  width: 80%;
+  margin: 4rem auto;
   font-family: Manrope, sans-serif;
 }
 
 /* Sign up specific css */
 .externalSignUp {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 .google,
 .apple {
@@ -29,11 +33,12 @@ html{
   padding: 1.5rem 1rem;
 }
 
-.externalSignUp img, .externalSignUp svg{
+.externalSignUp img,
+.externalSignUp svg {
   padding-right: 0.2rem;
 }
 
-button {
+Button {
   border: 1px solid rgb(168, 176, 184);
   background-color: #ffffff;
   border-radius: 1rem;
@@ -44,33 +49,34 @@ button {
   cursor: pointer;
 }
 
-hr{
-background-color: #53067e;
-padding: 2px;
-border: none;
-border-radius: 2rem;
-width:3.5rem;
-margin-right:1rem;
-height: .05rem;
+hr {
+  background-color: #53067e;
+  padding: 2px;
+  border: none;
+  border-radius: 2rem;
+  width: 3.5rem;
+  margin-right: 1rem;
+  height: 0.05rem;
 }
 
-.container h1{
+.container h1 {
   font-weight: 800;
 }
 
-.styledSignUp{
-display: inline-flex;
-align-items: center;
-color:#53067e;
-font-weight: 500;
-font-size: 14.5px;
+.styledSignUp {
+  display: inline-flex;
+  align-items: center;
+  color: #53067e;
+  font-weight: 500;
+  font-size: 14.5px;
 }
 
-.smallText{
+.smallText {
   font-weight: 200;
   font-size: 14px;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 0;
 }
+
 
 .smallText a{
  color: #7443B8;
@@ -78,87 +84,79 @@ font-size: 14.5px;
  cursor: pointer;
 }
 
-.submitSignUp{
-  background-color: #7443B8;
-  color:#fdffff;
+.submitSignUp {
+  background-color: #7443b8;
+  color: #fdffff;
   font-weight: 400;
-  padding: 0rem 5rem;
+  padding: 0rem 4.5rem;
   border-radius: 2rem;
   font-size: 16px;
+  width: fit-content;
+  margin-top: 1.5rem;
 }
 
-
-form div{
+form {
   display: flex;
   flex-direction: column;
-  margin: 1rem 0 2rem;
 }
 
-input{
-  margin-top: .5rem;
-  display:block;
-  padding:10px 10px 10px 5px;
-  border:none;
-  border-bottom:1px solid #757575;
-  font-size: 14px;
-}
-
-
-input:focus{ 
-  outline:none; 
-  border-bottom: 1px solid #7443B8;
-}
-
-.divider{
-display: inline-flex;
-}
-
-footer{
-  background-color: #333;
-  color: #fff;
-  padding-top: 2em;
-  font-family: "Single Day", sans-serif;
-  font-size: 20px;
-}
-
-footer div{
+form div {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  margin: 2rem 0 0;
+}
+
+input {
+  margin-top: 0.5rem;
+  margin-right: 0.8rem;
+  display: block;
+  padding: 10px 10px 10px 5px;
+  border: none;
+  border: 1px solid #757575;
+  font-size: 14px;
+  border-radius: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid #7443b8;
+}
+
+.divider {
+  width: 100%;
+  display: inline-flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
-footer div ul li a:hover{
-color: #7443B8;
+.checkbox {
+  display: inline-flex;
+  flex-direction: row;
+  margin: 1rem 0 0;
+}
+.checkbox label {
+  margin: 0.5rem 0 0 0.5rem;
 }
 
-footer div ul li a{
-  color: #fff;
-}
-
-footer div:nth-child(2){
-  margin-top: 0.5em;
-  border-top: solid 1px #fff;
-}
-
-div.error_email, div.error_password{
+div.error_email,
+div.error_password {
   border-bottom: solid 0.5px red;
 }
-label.error_email, label.error_password{
+label.error_email,
+label.error_password {
   color: red;
 }
 
-
 /* Email verify css */
 
-.otpTitle{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.otpTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-.otpTitle h2{
-  padding:2rem 0rem 0rem 0rem;
+h2 {
+  padding: 2rem 0rem 0rem 0rem;
   font-size: 18px;
 }
 .otp-field {
@@ -169,11 +167,11 @@ label.error_email, label.error_password{
 .otp-field input {
   width: 2.7rem;
   font-size: 30px;
-  padding: .5rem;
+  padding: 0.5rem;
   text-align: center;
-  border-radius: .5rem;
-  margin:0.5rem;
-  border: 2px solid #7443B8;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  border: 2px solid #7443b8;
   background: #ffffff;
   font-weight: bold;
   color: #000000;
@@ -186,4 +184,103 @@ label.error_email, label.error_password{
   box-shadow: 0 0 2px 2px #a527ff6a;
 }
 
+/* Basic Info */
+.measurementDivider {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
 
+.measurementDivider .inputInfo {
+  margin: 0 3.5rem 1.8rem 0rem;
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 105px;
+}
+
+.carouselImage {
+  height: 250px;
+}
+
+.right-arrow,
+.left-arrow {
+  position: absolute;
+  top: 40%;
+  font-size: 3.5rem;
+  color: #7443b8;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.right-arrow {
+  right: -65px;
+}
+
+.left-arrow {
+  left: -65px;
+}
+
+.divider .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ h3 {
+  margin: 0 1rem;
+  font-family: Manrope, sans-serif;
+  font-weight: 200;
+  color: #7443b8;
+}
+.right h3{
+  text-align: center;
+}
+.right section {
+  margin-top: 2rem;
+  height: 250px;
+}
+
+.slide {
+  transition-duration: 2s ease;
+}
+
+.slide.active {
+  transition: 1s;
+  transform: scale(1.07);
+}
+
+.dropdownBlock {
+  display: inline-flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.dropdownBlock .dropdown {
+  margin: 0;
+  position: relative;
+  top: 0.5rem;
+}
+.dropdown select {
+  border-radius: 1rem;
+  padding: 0.6rem;
+}
+
+.submitAvatar{
+  float: right;
+  background-color: #7443b8;
+  color: #fdffff;
+  font-weight: 400;
+  padding: 0rem 4.5rem;
+  border-radius: 2rem;
+  font-size: 15px;
+  width: fit-content;
+  margin-right: 1rem;
+}
+.spaceDiv{
+  height: 2rem;
+}

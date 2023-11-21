@@ -8,7 +8,7 @@ import img5 from "/src/assets/mvp/carousel/triangle shape.png";
 import { GoTriangleLeft } from "react-icons/go";
 import { GoTriangleRight } from "react-icons/go";
 
-export const Carousel = () => {
+export const Carousel = ({onShapeChange}) => {
     const CarouselData = [
       {
         image: img1,
@@ -30,10 +30,12 @@ export const Carousel = () => {
     const [current, setCurrent] = useState(0)
     const length = CarouselData.length
     const nextSlide = () => {
-      setCurrent(current === length-1 ? 0: current + 1)
+      setCurrent(current === length-1 ? 0: current + 1);
+      onShapeChange(current === CarouselData.length - 1 ? 0 : current + 1);
     };
     const prevSlide = () => {
       setCurrent(current === 0 ? length-1 : current - 1)
+      onShapeChange(current === 0 ? CarouselData.length - 1 : current - 1);
     };
 
 
@@ -43,7 +45,7 @@ export const Carousel = () => {
       <GoTriangleRight className="right-arrow" onClick={nextSlide} />
          {CarouselData.map((slide, index) => {
         return(
-         <div className={index === current ? 'slide active' : 'slide'} key={index} >
+         <div className={index === current ? 'slide active' : 'slide'} key={index}>
          {index === current && ( <img src={slide.image} alt="body type" className="carouselImage"/>)}
         
          </div> 

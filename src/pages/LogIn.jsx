@@ -5,27 +5,30 @@ import Cookies from "js-cookie";
 import googleLogo from "../assets/mvp/logo/google.png";
 import { FaApple } from "react-icons/fa";
 import image from "../assets/mvp/EasyFitsStart.png";
-import { url } from "../components/url";
+import { url } from "../components/shared/url";
 import { Navbar } from "../components/Navbar/Navbar";
 import { Contact } from "../components/Contact/Contact";
 
 function LogIn() {
   const navigation = useNavigate();
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  let [email, setEmail] = useState(Cookies.get('email')? Cookies.get('email') : "" );
+  let [password, setPassword] = useState(Cookies.get('password')? Cookies.get('password') : "" );
   const [error_email, setErrorEmail] = useState("");
   const [error_password, setErrorPassword] = useState("");
-  const [error, sameUser] = useState("");
+  const [error, setErrorMesssage] = useState("");
+  let [isChecked, setIsChecked] = useState(false);
   const EMAIL_REGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; //regex to check if the email entered is valid
   const PASSWORD_REGEX =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]/; // regex to check if the password entered is valid
 
-  function createAccount(email, password) {
-    const urlRegister = url.auth + "register";
+  function login(email, password) {
+  
+    const urlLogin = url.auth + "signIn";
 
-    fetch(urlRegister, {
+    fetch(urlLogin, {
       method: "POST",
+      credentials: "include",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -35,46 +38,23 @@ function LogIn() {
         password: password,
       }),
     })
-      .then((response) => response.json())
-      .then(async (tokens) => {
-        console.log(tokens);
-        if (tokens.statusCode == 409) {
-          sameUser("An account with the same email already exist");
-        } else {
-          console.log("Account successfully created");
-
-          Cookies.remove("userId");
-
-          Cookies.set("userId", tokens.id);
-
-          const urlLogin = url.auth + "login";
-
-          fetch(urlLogin, {
-            method: "POST",
-            headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              email: email,
-              password: password,
-            }),
-          })
-            .then((res) => res.json())
-            .then(async (receivedTokens) => {
-              console.log(receivedTokens);
-              Cookies.remove("refreshToken");
-
-              Cookies.set("refreshToken", receivedTokens.refreshToken, {
-                expires: 30,
-                secure: true,
-                httpOnly: true,
-              });
-            })
-            .then(() => {
-              //   navigation("/email-verification");
-              console.log("Login successful");
-            });
+      .then((res) => res.json())
+      .then(response => {
+        if(response.statusCode === 404){
+          setErrorMesssage("The email that you entered, does not exist. Please enter the email that you registered with!");
+        }
+        else if (response.statusCode === 401){
+          setErrorMesssage("The password that you entered for the email is invalid, Please enter the correct password!");
+        }
+        else if(response.statusCode){
+          setErrorMesssage("An error occured during login. Please try to login once again!");
+        }
+        else{
+          if(isChecked){
+            Cookies.set("email", email, { expires:30});
+            Cookies.set("password", password, { expires:30});
+          }
+         navigation("/BasicInfo");
         }
       });
   }
@@ -109,7 +89,7 @@ function LogIn() {
     }
 
     if (Object.keys(errors).length === 0) {
-      createAccount(email, password);
+      login(email, password);
     }
   }
 
@@ -192,8 +172,21 @@ function LogIn() {
                 )}
               </div>
 
+              {error && (
+                  <span
+                    style={{
+                      color: "red",
+                      alignSelf: "center",
+                      paddingHorizontal: 25,
+                      marginTop: "2%",
+                    }}
+                  >
+                    {error || "Error"}
+                  </span>
+                )}
+
               <div className="checkbox">
-                <input type="checkbox" id="checkbox" />
+                <input type="checkbox" id="checkbox" value={isChecked} onChange={(e) =>{setIsChecked(!isChecked)}}/>
                 <label htmlFor="checkbox">Remember me</label>
               </div>
 

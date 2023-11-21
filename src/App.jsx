@@ -5,7 +5,7 @@ import SignUp from "./pages/SignUp";
 import EmailVerify from "./pages/EmailVerify";
 import LogIn from "./pages/LogIn";
 import BasicInfo from "./pages/BasicInfo";
-import Changes from "./pages/Changes";
+// import Changes from "./pages/Changes";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <Route path="/EmailVerify" element={<EmailVerify />}></Route>
         <Route path="/LogIn" element={<LogIn />}></Route>
         <Route path="/BasicInfo" element={<BasicInfo />}></Route>
-        <Route path="/Changes" element={<Changes />}></Route>
+        {/* <Route path="/Changes" element={<Changes />}></Route> */}
 
       </Routes>
     </>

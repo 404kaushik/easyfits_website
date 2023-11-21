@@ -100,11 +100,7 @@ form {
   flex-direction: column;
 }
 
-form div {
-  display: flex;
-  flex-direction: column;
-  margin: 2rem 0 0;
-}
+
 
 input {
   margin-top: 0.5rem;
@@ -188,11 +184,13 @@ h2 {
 .measurementDivider {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
 }
 
-.measurementDivider .inputInfo {
+.measurementDivider .inputInfo, .modifyDivider .inputInfo {
   margin: 0 3.5rem 1.8rem 0rem;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Carousel */
@@ -200,7 +198,8 @@ h2 {
   position: relative;
   display: flex;
   justify-content: center;
-  width: 105px;
+  width: 115px;
+  height:280px;
 }
 
 .carouselImage {
@@ -229,6 +228,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: fit-content;
 }
 
  h3 {
@@ -239,10 +239,10 @@ h2 {
 }
 .right h3{
   text-align: center;
+  width: 16rem;
 }
 .right section {
   margin-top: 2rem;
-  height: 250px;
 }
 
 .slide {
@@ -278,9 +278,31 @@ h2 {
   padding: 0rem 4.5rem;
   border-radius: 2rem;
   font-size: 15px;
-  width: fit-content;
-  margin-right: 1rem;
+  margin-top: 2rem;
 }
 .spaceDiv{
   height: 2rem;
+}
+
+.canvasDiv{
+  width: 30rem;
+  height:25rem;
+}
+
+/* modify/some tweaking screen */
+
+.buttons{
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.modifyText{
+  margin: 1rem 0.5rem;
+}
+
+.modifyDivider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
 }
